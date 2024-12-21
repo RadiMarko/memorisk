@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(147, 220, 147);
+  user-select: none;
+}
+
+.game-area {
+  display: grid;
+  width: 40rem;
+  height: 40rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  font-family: "Press Start 2P";
+}
+
+.start-button {
+  grid-column: 1;
+  grid-row: 1;
+  font-size: 1.6rem;
+  border: black 0.4rem solid;
+  padding: 1rem 1rem;
+}
+
+.start-button:hover {
+  cursor: pointer;
+  background-color: gray;
+}
+
+.start-button:active {
+  color: white;
+  background-color: black;
+}
+
+.high-score-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.high-score-counter {
+  margin-top: 1rem;
+}
+
+.game-button {
+  display: flex;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  border: black 0.4rem solid;
+  align-items: center;
+  justify-content: center;
+}
+
+.hand-image {
+  width: 6.4rem;
+  height: 6.4rem;
+  pointer-events: none;
+}
+
+#red {
+  grid-column: 2;
+  grid-row: 1;
+  background-color: red;
+}
+
+#green {
+  grid-column: 1;
+  grid-row: 2;
+  background-color: green;
+}
+
+#blue {
+  grid-column: 2;
+  grid-row: 3;
+  background-color: blue;
+}
+
+#gold {
+  grid-column: 3;
+  grid-row: 2;
+  background-color: gold;
+}
+
+.game-button:hover {
+  cursor: pointer;
+}
+
+.game-button:active {
+  filter: brightness(50%);
+}
+
+.counter-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.counter-area > p {
+  font-size: 2rem;
+  margin-top: 1.5rem;
+}
+
+.rules {
+  grid-column: 1;
+  grid-row: 3;
+  width: 10rem;
+  font-size: 0.825rem;
+  line-height: 1.5rem;
+}
+
+.dev-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  grid-column: 3;
+  grid-row: 3;
+  font-size: 0.825rem;
+}
+
+@media (max-width: 639px) {
+  body {
+    padding: 1rem;
+  }
+
+  .game-area {
+    width: 24rem;
+    height: 24rem;
+  }
+
+  .start-button {
+    font-size: 1.2rem;
+    border: black 0.3rem solid;
+    padding: 0.8rem 0.8rem;
+  }
+
+  .high-score-area {
+    font-size: 0.8rem;
+  }
+
+  .high-score-counter {
+    margin-top: 0.8rem;
+  }
+
+  .counter-area > p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .current-counter {
+    font-size: 1.5rem;
+  }
+
+  .rules {
+    font-size: 0.64rem;
+  }
+}
